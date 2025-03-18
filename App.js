@@ -3,10 +3,18 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import Constants from 'expo-constants';
 
+//exemplos
+
+import Exemplo01 from './src/exemplos/exemplo-01';
+
+//atividades
+
+import Atividade01 from './src/atividades/atividade-01';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>pão de queijo</Text>
+      <Atividade01 />
       <StatusBar style="auto" />
     </View>
   );
@@ -18,6 +26,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'orange',
     alignItems: 'center',
     justifyContent: 'center',
-    margingTop: Constants.statusBarHeight,
+    padding: 8,
+    paddingTop: Constants.statusBarHeight  || 8,
   },
 });
+
