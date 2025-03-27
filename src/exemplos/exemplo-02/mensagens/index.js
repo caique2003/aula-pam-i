@@ -1,13 +1,12 @@
-
 import { View, Text } from "react-native";
 
 import styles from "./styles";
 
-function Mensagem({titulo, mensagem}){
+function Mensagem({titulo,children}){
     return(
         <View style={styles.container}> 
-        <Text style={styles.titulo}>{titulo}Título</Text>
-        <Text style={styles.mensagem}>{children}Mensagem</Text>
+        <Text style={styles.titulo}>{titulo}</Text>
+        <Text style={styles.mensagem}>{children}</Text>
         </View>
     );
 }

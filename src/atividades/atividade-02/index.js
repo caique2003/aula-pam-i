@@ -1,12 +1,28 @@
-import { View, Text } from 'react-native'; 
+import { View, Text, Image} from 'react-native'; 
 
 import styles from './styles'; 
+import img from '../../../assets/002-1-react-native.png';
 
-function atividade02 () {
+import Mensagem from './mensagens';
+
+function atividade02() {
     return(
         <View style={styles.container}>
-            <Text style={styles.titulo}>atividade02</Text>
-            <Text style={styles.texto}>Aula de react-native com Expo</Text>
+            <Text style={styles.titulo}>Exemplo02</Text>
+        <Image source={img} style={styles.imagem}/>
+        
+        <Mensagem titulo={'Sucesso'}>
+            Valor enviado corretamente!
+        </Mensagem>
+
+        <Mensagem titulo={'Erro'}>
+            O programa não respondeu como esperado!
+        </Mensagem>
+        
+        <Mensagem titulo={'Alerta'}>
+        Você não pode fazer isso!
+        </Mensagem>
+
         </View>
     );
 }
