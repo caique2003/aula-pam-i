@@ -16,7 +16,7 @@ import atividade02 from './src/atividades/atividade-02';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo02/>
+      <atividade02/>
       <StatusBar style="auto" />
     </View>
   );

@@ -1,30 +1,46 @@
-import { View, Text, Image} from 'react-native'; 
+import { View, Text } from 'react-native'; 
 
-import styles from './styles'; 
-import img from '../../../assets/002-1-react-native.png';
+import styles from './styles';
 
-import Mensagem from './mensagens';
+import  splashicon  from '../../../assets/splash-icon.png'; 
+import camisaPreta from '../../../assets/camisaPreta.png'; 
+import camisaBordo from '../../../assets/camisaBordo.png'; 
+import camisaListrada from '../../../assets/camisaListrada.png'; 
 
-function atividade02() {
+import Card from './card';
+
+function Atividade02 () {
     return(
         <View style={styles.container}>
-            <Text style={styles.titulo}>Exemplo02</Text>
-        <Image source={img} style={styles.imagem}/>
-        
-        <Mensagem titulo={'Sucesso'}>
-            Valor enviado corretamente!
-        </Mensagem>
+            <Text style={styles.titulo}>Atividade02</Text>            
 
-        <Mensagem titulo={'Erro'}>
-            O programa não respondeu como esperado!
-        </Mensagem>
-        
-        <Mensagem titulo={'Alerta'}>
-        Você não pode fazer isso!
-        </Mensagem>
+            <Card 
+                titulo={'splash-icon'} 
+                descricao={'Camisa de jogo titular'} 
+                valor={'350,00'}
+                img={camisaBranca}
+            />
+            <Card 
+                titulo={'Camiseta nº 2'} 
+                descricao={'Camisa de jogo como visitante'} 
+                valor={'350,00'}
+                img={camisaPreta}
+            />
+            <Card 
+                titulo={'Camiseta 2012'} 
+                descricao={'Camisa do São Jorge'} 
+                valor={'350,00'}
+                img={camisaBordo}
+            />
+            <Card 
+                titulo={'Camiseta listrada clássica'} 
+                descricao={'Camisa de jogo de antigamente com listras, muito utilizada pela torcida'} 
+                valor={'350,00'}
+                img={camisaListrada}
+            />
 
         </View>
     );
 }
 
-export default atividade02;
+export default Atividade02;
