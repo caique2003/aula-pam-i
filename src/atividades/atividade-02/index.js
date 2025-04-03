@@ -1,11 +1,11 @@
-import { View, Text } from 'react-native'; 
+import { View, Text, Card, } from 'react-native'; 
 
 import styles from './styles';
 
-import  splashicon  from '../../../assets/splash-icon.png'; 
-import camisaPreta from '../../../assets/camisaPreta.png'; 
-import camisaBordo from '../../../assets/camisaBordo.png'; 
-import camisaListrada from '../../../assets/camisaListrada.png'; 
+import  motoCinza  from '../../../../assets/moto cinza.png'; 
+import motoPreta from '../../../../assets/moto preta.png'; 
+import motoVermelha from '../../../../assets/moto vermelha.png'; 
+import motoAzul from '../../../../assets/moto azul.png'; 
 
 import Card from './card';
 
@@ -13,34 +13,35 @@ function Atividade02 () {
     return(
         <View style={styles.container}>
             <Text style={styles.titulo}>Atividade02</Text>            
-
+         
             <Card 
-                titulo={'splash-icon'} 
-                descricao={'Camisa de jogo titular'} 
-                valor={'350,00'}
-                img={camisaBranca}
+                titulo={'moto cinza'} 
+                descricao={'honda cinza 2018'} r
+                valor={'15.999'}
+                img={motoCinza}
+            />
+       
+            <Card 
+                titulo={'moto preta'} 
+                descricao={'honda preta 2021'} 
+                valor={'16.000'}
+                img={motoPreta}
             />
             <Card 
-                titulo={'Camiseta nº 2'} 
-                descricao={'Camisa de jogo como visitante'} 
-                valor={'350,00'}
-                img={camisaPreta}
-            />
-            <Card 
-                titulo={'Camiseta 2012'} 
-                descricao={'Camisa do São Jorge'} 
-                valor={'350,00'}
-                img={camisaBordo}
-            />
-            <Card 
-                titulo={'Camiseta listrada clássica'} 
-                descricao={'Camisa de jogo de antigamente com listras, muito utilizada pela torcida'} 
-                valor={'350,00'}
-                img={camisaListrada}
+                titulo={'moto vermelha'} 
+                descricao={'honda vermelha 2022'} 
+                valor={'16.500'}
+                img={motoVermelha}
             />
 
+            <Card 
+            titulo={'moto preta'} 
+            descricao={'honda preta 2021'} 
+            valor={'16.000'}
+            img={motoAzul}
+            />
         </View>
     );
 }
 
-export default Atividade02;
+export default Atividade02

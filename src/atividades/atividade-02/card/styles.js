@@ -20,7 +20,15 @@ const styles = StyleSheet.create({
         color: 'darkslategrey', 
     }, 
     valor: {
-        color: '#000',
+        fontSize: RFPercentage(2.5),
+        color: '#fff', // Contraste com o fundo escuro
+        fontWeight: 'bold',
+        textAlign: 'center',
+        backgroundColor: '#333', // Fundo escuro para destaque
+        padding: RFPercentage(1),
+        borderRadius: RFPercentage(1),
+        width: '80%',
+        marginTop: RFPercentage(1),
     }, 
     descricao: {
         fontSize: RFPercentage(1.6), 
