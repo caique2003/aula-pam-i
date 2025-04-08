@@ -28,30 +28,35 @@ const styles = StyleSheet.create({
         fontSize: RFPercentage(2.2),  
     }, 
     botaoAlert: {
-        width: '100%',         
-        margin: RFPercentage(1),
+        width: '75%',         
+        margin: RFPercentage(2),
+    
     }, 
-    numero: {
-        fontSize: RFPercentage(4), 
-        color: 'coral',
-        margin: RFPercentage(2)
-    }, 
-    botao: {
-        backgroundColor: 'deepskyblue', 
-        width: '70%', 
-        // height: RFPercentage(4), 
-        borderRadius: RFPercentage(2), 
-        alignItems: 'center', 
-        justifyContent: 'center', 
-        padding: RFPercentage(1),
-    }, 
-    txtBotao: {
-        fontSize: RFPercentage(2), 
-        color: '#fafafa', 
-        fontWeight: 'bold', 
-        letterSpacing: 1.5,
+    
+    valor:{
+        color: 'pink',
+        fontSize: RFPercentage(4)
     },
+
+    botao:{
+        backgroundColor: 'pink',
+        width: '75%',
+        borderRadius: RFPercentage(2),
+        padding: RFPercentage(1),
+        alignItems:'center', 
+        justifyContent: 'center',
+        margin: RFPercentage(1) ,
+        fontWeight: 'bold', 
+    },
+
+    txtBotao:{
+     fontSize: RFPercentage(2),
+     fontWeight: 'bold', 
+     color:'#fafafa'
+
+    }
 });
 
 export default styles;
+
 
