@@ -12,7 +12,7 @@ import Exemplo03 from './src/exemplos/exemplo-03';
 
 import Atividade01 from './src/atividades/atividade-01';
 import Atividade03 from './src/atividades/atividade-03';
-
+import Atividade02 from './src/atividades/atividade-02';
 export default function App() {
   return (
     <View style={styles.container}>
