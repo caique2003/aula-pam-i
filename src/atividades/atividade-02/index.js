@@ -7,7 +7,7 @@ import Motovermelha from '../../../assets/moto vermelha.jpg';
 import MotoPreta from '../../../assets/moto preta.jpg'; 
 import MotoListrada from '../../../assets/moto cinza.jpg'; 
 
-import Card from './card';
+import Card from './Card';
 
 function Atividade02 () {
     return(
