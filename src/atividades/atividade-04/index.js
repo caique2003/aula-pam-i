@@ -13,14 +13,13 @@ function Atividade04() {
     <View style={styles.container}>
           <Text style={styles.titulo}>Atividade 04</Text>
 
-      <Text style={styles.titulo}>Insira seu nome e sobrenome</Text>
-<Text style={styles.txt}>nome</Text>
+
       <TextInput
         style={styles.txtInput}
         placeholder="Nome"
         onChangeText={(valorNome) => setNome(valorNome)}
       />
-<Text style={styles.txt}>Sobrenome</Text>
+
       <TextInput
         style={styles.txtInput}
         placeholder="Sobrenome"
