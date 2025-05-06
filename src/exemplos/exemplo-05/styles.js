@@ -12,21 +12,20 @@ const styles = StyleSheet.create({
         margin: 8,
     }, 
     titulo: {
-        fontSize: RFPercentage(3), 
-        color: 'deepskyblue', 
-        fontWeight: 'bold', 
-        borderWidth: 2, 
-        borderColor: 'deepskyblue', 
-        marginTop: 10, 
-        marginBottom: 10, 
-        padding: 12, 
-        width: '80%', 
-        height: 80, 
-        textAlign: 'center', 
-        textAlignVertical: 'center', 
-        borderRadius: 20,
-        
-    }, 
+      fontSize: RFPercentage(3),
+      color: 'deepskyblue',
+      fontWeight: 'bold',
+      borderWidth: 2,
+      borderColor: 'deepskyblue',
+      marginTop: 10,
+      marginBottom: 10,
+      padding: 12,
+      width: '80%',
+      height: 80,
+      textAlign: 'center',
+      textAlignVertical: 'center',
+      borderRadius: 20,
+  },
   texto: {
     fontSize: RFPercentage(2.2),
   },
@@ -38,12 +37,12 @@ const styles = StyleSheet.create({
   },
   txtSaida: {
     fontSize: 18,
-    color: '#fff', // Letra branca pra destacar no fundo vermelho
+    color: '#fff', 
     marginVertical: 10,
   },
   txtLabel: {
     fontSize: 16,
-    color: '#fff', // Letra branca também
+    color: '#fff',
     marginBottom: 5,
   },
   txtEntrada: {
@@ -51,10 +50,10 @@ const styles = StyleSheet.create({
     borderColor: '#fff',
     padding: 10,
     marginBottom: 15,
-    borderRadius: 15, // <- Cantos mais arredondados
+    borderRadius: 15, 
     width: '100%',
     backgroundColor: '#fff',
-    color: '#000', // Texto preto dentro da caixa branca
+    color: '#000', 
   },
   button: {
     backgroundColor: '#fff',
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   textButton: {
-    color: 'red', // Combina com o fundo agora
+    color: 'red', 
     fontSize: 18,
     fontWeight: 'bold',
   },

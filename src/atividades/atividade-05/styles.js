@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize';
 
 const styles = StyleSheet.create({
   
@@ -7,13 +8,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#f4f4f4',
+    backgroundColor: 'white',
+    borderRadius: RFPercentage(5),
   },
   titulo: {
     fontSize: 26,
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: 15,
+    marginBottom: 10,
+    borderBlockEndColor: 'blue',
+    borderWidth: 1, 
+    borderColor: 'deepskyblue', 
+    marginTop: 6, 
+    marginBottom: 5, 
+    padding: 10, 
+    width: '80%', 
+    
   },
   txtSaida: {
     fontSize: 18,
