@@ -1,90 +1,51 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { useState } from 'react';
+import { View, Text } from 'react-native'; 
+
+import Input from './input'; 
+import Botao from './botao';
+
 import styles from './styles';
 
-function Atividade05() {
-  const [num1, setNum1] = useState('');
-  const [num2, setNum2] = useState('');
-  const [resultado, setResultado] = useState('');
+export default function Atividade5() {
 
-  const operar = (operacao) => {
-    const n1 = parseFloat(num1);
-    const n2 = parseFloat(num2);
+    const [n1, setN1] = useState(0);
+    const [n2, setN2] = useState(0);
+    const [total, setTotal] = useState(0);
 
-    if (isNaN(n1) || isNaN(n2)) {
-      setResultado('Erro: entrada inválida!');
-      return;
+    function handleZerar() {
+        setN1(0);
+        setN2(0);
+        setTotal(0);
     }
 
-    let total;
-    switch (operacao) {
-      case '+':
-        total = n1 + n2;
-        break;
-      case '-':
-        total = n1 - n2;
-        break;
-      case '*':
-        total = n1 * n2;
-        break;
-      case '/':
-        total = n2 !== 0 ? n1 / n2 : 'Erro: divisão por zero';
-        break;
-      default:
-        total = 'Operação inválida';
-    }
+    return (
+        <View style={styles.container}>
+            <Text style={styles.titulo}> Exemplo 5 </Text>
 
-    setResultado(total.toString());
-  };
+            <Text style={styles.txtSaida}> Calculadora básica </Text>
 
-  const limpar = () => {
-    setNum1('');
-    setNum2('');
-    setResultado('');
-  };
+            <Text style={styles.textLabel}> 1º número </Text>
+            <Input onChangeText={setN1} value={n1} />
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.titulo}>Atividade 05</Text>
-      <Text style={styles.txtSaida}>Calculadora básica</Text>
+            <Text style={styles.txtSaida}> + </Text>
 
-      <Text style={styles.txtLabel}>1º número</Text>
-      <TextInput
-        style={styles.txtEntrada}
-        keyboardType="numeric"
-        value={num1}
-        onChangeText={setNum1}
-      />
+            <Text style={styles.textLabel}> 2º número </Text>
+            <Input onChangeText={setN2} value={n2} />
 
-      <Text style={styles.txtLabel}>2º número</Text>
-      <TextInput
-        style={styles.txtEntrada}
-        keyboardType="numeric"
-        value={num2}
-        onChangeText={setNum2}
-      />
+            <Text style={[styles.txtSaida, { margin: 0 }]}> = </Text>
 
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={() => operar('+')}>
-          <Text style={styles.buttonText}>+</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => operar('-')}>
-          <Text style={styles.buttonText}>-</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => operar('*')}>
-          <Text style={styles.buttonText}>*</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => operar('/')}>
-          <Text style={styles.buttonText}>/</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={limpar}>
-          <Text style={styles.buttonText}>C</Text>
-        </TouchableOpacity>
-      </View>
+            <Text style={styles.textLabel}> Total </Text>
+            <Input value={parseFloat(total).toFixed(2)} total />
 
-      <Text style={styles.result}>Resultado: {resultado}</Text>
-    </View>
-  );
+            <View style={styles.ladoAlado}>
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>+</Botao>        
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>-</Botao>        
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>*</Botao>        
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>/</Botao>        
+            </View>   
+
+            <Botao onPress={handleZerar}>Zerar</Botao>         
+
+        </View>
+    );
 }
-
-export default Atividade05;

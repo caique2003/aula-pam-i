@@ -3,6 +3,11 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import Constants from 'expo-constants';
 
+// CONSTANTES
+
+
+import Index from './src/exemplos/componentes/index';
+
 //exemplo
 
 import Exemplo01 from './src/exemplos/exemplo-01';
@@ -17,10 +22,12 @@ import Atividade03 from './src/atividades/atividade-03';
 import Atividade02 from './src/atividades/atividade-02';
 import Atividade04 from './src/atividades/atividade-04';
 import Atividade05 from './src/atividades/atividade-05';
+
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Atividade05/>
+      <Index/>
       <StatusBar style="auto" />
     </View>
   );
