@@ -6,7 +6,7 @@ import Botao from './botao';
 
 import styles from './styles';
 
-export default function Exemplo6() {
+export default function Exemplo06() {
 
     const [peso, setPeso] = useState(null);
     const [altura, setAltura] = useState(null);
@@ -20,7 +20,7 @@ export default function Exemplo6() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Exemplo 6</Text>
+            <Text style={styles.titulo}>Exemplo 06</Text>
             <View style={styles.ladoalado}>
                 <Input placeholder='Peso' valor={peso} atualizaValor={setPeso} />
                 <Input placeholder='Altura' valor={altura} atualizaValor={setAltura} />

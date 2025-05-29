@@ -1,18 +1,19 @@
-import { TextInput } from 'react-native';
+import { Pressable, Text } from 'react-native';
 
 import styles from './styles';
 
- function Input({placeholder, valor, atualizaValor}) {
+export default function Botao({ children, calcular }) {
     return (
-        <TextInput 
-            style={[styles.input, {outline: 'none'}]} 
-            placeholder={placeholder} 
-            placeholderTextColor='lightgray' 
-            keyboardType='numeric' 
-            value={valor} 
-            onChangeText={vlr => atualizaValor(vlr)}
-        />
+        <Pressable
+            style={
+                ({ pressed }) => pressed ?
+                    [styles.botao, styles.btnPress]
+                    :
+                    styles.botao
+            }
+            onPress={() => calcular()}
+        >
+            <Text style={styles.txtBotao}>{children}</Text>
+        </Pressable>
     );
 }
-
-export default Input;
